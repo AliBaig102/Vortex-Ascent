@@ -25,7 +25,7 @@ export function CompanyLogos() {
   ];
 
   return (
-    <section className="py-12 md:py-16 px-4 container mx-auto dark:bg-primary rounded-4xl bg-zinc-50">
+    <section className="py-12 md:py-16 px-4 container mx-auto rounded-4xl bg-zinc-50 dark:bg-zinc-900">
       <div className=" ">
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16">
           {companies.map((company) => (
