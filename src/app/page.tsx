@@ -23,7 +23,7 @@ export default function Home() {
     <div className="min-h-screen">
       <Header />
       <HeroSection />
-      <CompanyLogos />
+      {/* <CompanyLogos /> */}
       <FitnessCategories />
       <TrainingSteps />
       <PricingPlans />
