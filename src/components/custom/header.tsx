@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Dumbbell, Menu, User, Phone, Mail } from "lucide-react";
 import { ThemeToggle } from "@/components/custom/theme-toggle";
+import Image from "next/image";
 
 export function Header() {
   return (
@@ -9,12 +10,19 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="flex items-center justify-center w-10 h-10 bg-primary rounded-lg">
-              <Dumbbell className="h-6 w-6 text-primary-foreground" />
+            <div className="relative flex items-center justify-center w-10 h-10 ">
+              <Image
+                src="/images/text-logo.png"
+                alt="MaxFit Logo"
+                width={50}
+                height={50}
+                className="object-contain rounded-lg"
+                priority={true}
+              />
             </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-bold text-foreground">Vortex Ascent</span>
-              {/* <span className="text-xs text-muted-foreground">Fitness & Training</span> */}
+            <div className="flex flex-col -space-y-1">
+              <span className="text-lg font-bold tracking-tight text-foreground">Vortex</span>
+              <span className="text-sm font-medium text-primary">Ascent</span>
             </div>
           </div>
 

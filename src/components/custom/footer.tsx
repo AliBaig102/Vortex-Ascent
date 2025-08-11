@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export function Footer() {
@@ -10,61 +11,67 @@ export function Footer() {
     service: [
       { label: "Contact Us", href: "/contact" },
       { label: "Affiliate Program", href: "/affiliate" },
-      { label: "About Us", href: "/about" }
+      { label: "About Us", href: "/about" },
     ],
     fitness: [
       { label: "Platform", href: "/platform" },
       { label: "Workout Library", href: "/workouts" },
-      { label: "App Design", href: "/app" }
+      { label: "App Design", href: "/app" },
     ],
     aboutUs: [
       { label: "Service", href: "/service" },
       { label: "Fitness", href: "/fitness" },
-      { label: "About Us", href: "/about" }
-    ]
+      { label: "About Us", href: "/about" },
+    ],
   };
 
   return (
-    <footer className="bg-zinc-50 dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800">
+    <footer className="bg-zinc-50 dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800 rounded-t-4xl">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Brand Section */}
           <div className="lg:col-span-2 space-y-6">
             {/* Logo */}
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
-                <div className="w-6 h-6 bg-white rounded transform rotate-45"></div>
+              <div className="size-20 relative">
+                <Image
+                  src="/images/text-logo.png"
+                  alt="MaxFit Logo"
+                  fill
+                  className="object-contain rounded-2xl"
+                  priority={true}
+                />
               </div>
-              <span className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">MaxFit</span>
             </div>
-            
+
             {/* Description */}
             <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-sm">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
             </p>
-            
+
             {/* Social Media Icons */}
             <div className="flex items-center gap-4">
-              <Link 
-                href="#" 
+              <Link
+                href="#"
                 className="w-10 h-10 bg-zinc-200 dark:bg-zinc-800 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
               >
                 <Facebook className="w-5 h-5" />
               </Link>
-              <Link 
-                href="#" 
+              <Link
+                href="#"
                 className="w-10 h-10 bg-zinc-200 dark:bg-zinc-800 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
               >
                 <Instagram className="w-5 h-5" />
               </Link>
-              <Link 
-                href="#" 
+              <Link
+                href="#"
                 className="w-10 h-10 bg-zinc-200 dark:bg-zinc-800 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
               >
                 <Linkedin className="w-5 h-5" />
               </Link>
             </div>
-            
+
             {/* Newsletter Subscription */}
             <div className="space-y-4">
               <h4 className="font-semibold text-zinc-900 dark:text-zinc-100">
@@ -73,9 +80,9 @@ export function Footer() {
               <div className="flex gap-2 max-w-sm">
                 <div className="relative flex-1">
                   <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zinc-400" />
-                  <Input 
-                    type="email" 
-                    placeholder="Enter Your Email Here" 
+                  <Input
+                    type="email"
+                    placeholder="Enter Your Email Here"
                     className="pl-10 bg-zinc-100 dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700 focus:border-primary"
                   />
                 </div>
@@ -85,7 +92,7 @@ export function Footer() {
               </div>
             </div>
           </div>
-          
+
           {/* Links Columns */}
           <div className="space-y-6">
             <h4 className="font-semibold text-zinc-900 dark:text-zinc-100 text-lg">
@@ -94,8 +101,8 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.service.map((link, index) => (
                 <li key={index}>
-                  <Link 
-                    href={link.href} 
+                  <Link
+                    href={link.href}
                     className="text-zinc-600 dark:text-zinc-400 hover:text-primary transition-colors duration-300"
                   >
                     {link.label}
@@ -104,7 +111,7 @@ export function Footer() {
               ))}
             </ul>
           </div>
-          
+
           <div className="space-y-6">
             <h4 className="font-semibold text-zinc-900 dark:text-zinc-100 text-lg">
               Get Started
@@ -112,8 +119,8 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.fitness.map((link, index) => (
                 <li key={index}>
-                  <Link 
-                    href={link.href} 
+                  <Link
+                    href={link.href}
                     className="text-zinc-600 dark:text-zinc-400 hover:text-primary transition-colors duration-300"
                   >
                     {link.label}
@@ -122,7 +129,7 @@ export function Footer() {
               ))}
             </ul>
           </div>
-          
+
           <div className="space-y-6">
             <h4 className="font-semibold text-zinc-900 dark:text-zinc-100 text-lg">
               Get Started
@@ -130,8 +137,8 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.aboutUs.map((link, index) => (
                 <li key={index}>
-                  <Link 
-                    href={link.href} 
+                  <Link
+                    href={link.href}
                     className="text-zinc-600 dark:text-zinc-400 hover:text-primary transition-colors duration-300"
                   >
                     {link.label}
@@ -141,30 +148,34 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        
+
         {/* Bottom Section */}
         <div className="mt-12 pt-8 border-t border-zinc-200 dark:border-zinc-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-zinc-500 dark:text-zinc-400 text-sm">
-              © {currentYear} MaxFit. All rights reserved.
+            <p className="text-zinc-500 dark:text-zinc-400 text-sm font-medium tracking-wide">
+              © {currentYear} Vortex Ascent. All rights reserved{" "}
+              <span className="text-zinc-300 dark:text-zinc-600 mx-2">|</span>
+              <span className="text-zinc-600 dark:text-zinc-300 hover:text-primary transition-colors duration-300">
+                Developed by Mirza Ali Baig
+              </span>
             </p>
             <div className="flex items-center gap-6">
-              <Link 
-                href="#" 
+              <Link
+                href="#"
                 className="text-zinc-500 dark:text-zinc-400 hover:text-primary transition-colors duration-300 text-sm"
               >
                 Twitter
               </Link>
               <span className="text-zinc-300 dark:text-zinc-600">—</span>
-              <Link 
-                href="#" 
+              <Link
+                href="#"
                 className="text-zinc-500 dark:text-zinc-400 hover:text-primary transition-colors duration-300 text-sm"
               >
                 Instagram
               </Link>
               <span className="text-zinc-300 dark:text-zinc-600">—</span>
-              <Link 
-                href="#" 
+              <Link
+                href="#"
                 className="text-zinc-500 dark:text-zinc-400 hover:text-primary transition-colors duration-300 text-sm"
               >
                 Facebook
