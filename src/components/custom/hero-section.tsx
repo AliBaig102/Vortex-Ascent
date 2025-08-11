@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function HeroSection() {
   return (
-    <section className="py-12 md:py-20 px-4 bg-gradient-to-br from-zinc-50 to-zinc-100 dark:from-zinc-900 dark:to-zinc-800">
+    <section className="py-12 md:py-20 px-4">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Image - First on mobile, second on desktop */}

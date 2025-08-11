@@ -1,18 +1,27 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Header } from "@/components/custom/header";
 import { HeroSection } from "@/components/custom/hero-section";
-import { Dumbbell, Heart, Zap, Mail, User, ArrowRight } from 'lucide-react';
+import { CompanyLogos } from "@/components/custom/company-logos";
+import { Dumbbell, Heart, Zap, Mail, User, ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       <Header />
-      <HeroSection />
+      <div className="">
+        <HeroSection />
+        <CompanyLogos />
+      </div>
       <div className="max-w-6xl mx-auto p-8">
-
         {/* Demo Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           <Card>
@@ -22,7 +31,8 @@ export default function Home() {
                 Strength Training
               </CardTitle>
               <CardDescription>
-                Build muscle and increase your strength with our comprehensive programs.
+                Build muscle and increase your strength with our comprehensive
+                programs.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -40,7 +50,8 @@ export default function Home() {
                 Cardio Workouts
               </CardTitle>
               <CardDescription>
-                Improve your cardiovascular health with our varied cardio routines.
+                Improve your cardiovascular health with our varied cardio
+                routines.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -58,7 +69,8 @@ export default function Home() {
                 Yoga & Flexibility
               </CardTitle>
               <CardDescription>
-                Enhance your flexibility and find inner peace with our yoga classes.
+                Enhance your flexibility and find inner peace with our yoga
+                classes.
               </CardDescription>
             </CardHeader>
             <CardContent>
