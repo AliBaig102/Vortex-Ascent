@@ -49,7 +49,7 @@ export function PricingPlans() {
   ];
 
   return (
-    <section className="py-16 md:py-24 px-4 bg-zinc-100 dark:bg-zinc-800 container mx-auto rounded-4xl">
+    <section className="py-16 md:py-24 px-4 bg-zinc-100 dark:bg-zinc-800 mx-4 rounded-4xl">
       {/* Section Header */}
       <div className="container mx-auto">
         <div className="text-center mb-12">

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function NeverGiveUp() {
   return (
-    <section className="my-4 p-8 container mx-auto rounded-4xl bg-gradient-to-br overflow-hidden from-orange-500 to-orange-600 relative">
+    <section className="m-4 p-8 rounded-4xl bg-gradient-to-br overflow-hidden from-orange-500 to-orange-600 relative">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-black/5"></div>
       <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>

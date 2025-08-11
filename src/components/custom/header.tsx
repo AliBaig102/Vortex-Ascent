@@ -13,7 +13,7 @@ export function Header() {
             <div className="relative flex items-center justify-center w-10 h-10 ">
               <Image
                 src="/images/text-logo.png"
-                alt="MaxFit Logo"
+                alt="Vortex Ascent Logo"
                 width={50}
                 height={50}
                 className="object-contain rounded-lg"

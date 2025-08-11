@@ -36,7 +36,7 @@ export function Footer() {
               <div className="size-20 relative">
                 <Image
                   src="/images/text-logo.png"
-                  alt="MaxFit Logo"
+                  alt="Vortex Ascent Logo"
                   fill
                   className="object-contain rounded-2xl"
                   priority={true}
@@ -46,8 +46,7 @@ export function Footer() {
 
             {/* Description */}
             <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-sm">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
+              Elevate your fitness journey with our comprehensive workout platform and expert guidance. Join us in building a stronger, healthier you.
             </p>
 
             {/* Social Media Icons */}

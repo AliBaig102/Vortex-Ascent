@@ -5,7 +5,7 @@ import Image from "next/image";
 export function TrainingSteps() {
   return (
     <section className="py-16 px-4 bg-white dark:bg-zinc-950">
-      <div className="container mx-auto">
+      <div>
         {/* Training Step Section */}
         <div className="mb-20">
           <div className="text-center mb-12">
