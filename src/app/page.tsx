@@ -14,6 +14,8 @@ import { CompanyLogos } from "@/components/custom/company-logos";
 import { FitnessCategories } from "@/components/custom/fitness-categories";
 import { TrainingSteps } from "@/components/custom/training-steps";
 import { PricingPlans } from "@/components/custom/pricing-plans";
+import { NeverGiveUp } from "@/components/custom/never-give-up";
+import { Footer } from "@/components/custom/footer";
 import { Dumbbell, Heart, Zap, Mail, User, ArrowRight } from "lucide-react";
 
 export default function Home() {
@@ -25,6 +27,10 @@ export default function Home() {
       <FitnessCategories />
       <TrainingSteps />
       <PricingPlans />
+      <NeverGiveUp />
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
