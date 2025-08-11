@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Dumbbell, Menu, User, Phone, Mail } from "lucide-react";
 import { ThemeToggle } from "@/components/custom/theme-toggle";
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export function Header() {
@@ -13,14 +14,14 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="relative flex items-center justify-center w-10 h-10 ">
+          <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+            <div className="relative flex items-center justify-center w-10 h-10">
               <Image
-                src="/images/text-logo.png"
+                src="/images/logo.png"
                 alt="Vortex Ascent Logo"
-                width={50}
-                height={50}
-                className="object-contain rounded-lg"
+                width={40}
+                height={40}
+                className="object-contain"
                 priority={true}
               />
             </div>
@@ -30,7 +31,7 @@ export function Header() {
               </span>
               <span className="text-sm font-medium text-primary">Ascent</span>
             </div>
-          </div>
+          </Link>
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -40,7 +41,7 @@ export function Header() {
               { href: "/about", label: "About" },
               { href: "/contact", label: "Contact" },
             ].map(({ href, label }) => (
-              <a
+              <Link
                 key={href}
                 href={href}
                 className={`text-sm font-medium transition-colors relative group ${
@@ -55,7 +56,7 @@ export function Header() {
                     pathname === href ? "scale-x-100" : ""
                   }`}
                 />
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -66,12 +67,16 @@ export function Header() {
 
             {/* Action buttons */}
             <div className="hidden sm:flex items-center space-x-2">
-              <Button variant="outline" size="sm">
-                Log In
-              </Button>
-              <Button size="sm" className="bg-primary hover:bg-primary/90">
-                Sign Up
-              </Button>
+              <Link href="/login">
+                <Button variant="outline" size="sm">
+                  Log In
+                </Button>
+              </Link>
+              <Link href="/signup">
+                <Button size="sm" className="bg-primary hover:bg-primary/90">
+                  Sign Up
+                </Button>
+              </Link>
             </div>
 
             {/* Mobile menu button */}
