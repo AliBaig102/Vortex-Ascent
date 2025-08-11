@@ -2,28 +2,16 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { ThemeToggle } from '@/components/ui/theme-toggle';
+import { Header } from "@/components/custom/header";
+import { HeroSection } from "@/components/custom/hero-section";
 import { Dumbbell, Heart, Zap, Mail, User, ArrowRight } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100 dark:from-zinc-900 dark:to-zinc-800 p-8">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="flex justify-between items-start mb-12">
-          <div className="flex-1 text-center">
-            <h1 className="text-4xl font-bold text-zinc-900 dark:text-zinc-100 mb-4 flex items-center justify-center gap-3">
-              <Dumbbell className="h-10 w-10" />
-              Gym Website
-            </h1>
-            <p className="text-xl text-zinc-600 dark:text-zinc-400">
-              Next.js + shadcn/ui + Redux + Lucide Icons Demo
-            </p>
-          </div>
-          <div className="flex-shrink-0">
-            <ThemeToggle />
-          </div>
-        </div>
+    <div className="min-h-screen">
+      <Header />
+      <HeroSection />
+      <div className="max-w-6xl mx-auto p-8">
 
         {/* Demo Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
