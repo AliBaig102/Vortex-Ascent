@@ -11,6 +11,7 @@ import { Label } from "@/components/ui/label";
 import { Header } from "@/components/custom/header";
 import { HeroSection } from "@/components/custom/hero-section";
 import { CompanyLogos } from "@/components/custom/company-logos";
+import { FitnessCategories } from "@/components/custom/fitness-categories";
 import { Dumbbell, Heart, Zap, Mail, User, ArrowRight } from "lucide-react";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
       <div className="">
         <HeroSection />
         <CompanyLogos />
+        <FitnessCategories />
       </div>
       <div className="max-w-6xl mx-auto p-8">
         {/* Demo Cards */}
