@@ -1,6 +1,7 @@
 <h1 align="center">Vortex Ascent - Premium Fitness & Training Website</h1>
 <div align="center">
-  <img src="./images/hero-section.png" alt="Vortex Ascent Hero Section" width="100%" style="border-radius: 10px; margin-bottom: 20px;">
+  <img src="./images/vortex-ascent-dark.png" alt="Vortex Ascent Hero Section" width="100%" style="border-radius: 10px; margin-bottom: 20px; border: 2px solid #333;">
+  <img src="./images/vortex-ascent-light.png" alt="Vortex Ascent Hero Section" width="100%" style="border-radius: 10px; margin-bottom: 20px; border: 1px solid #333;">
 </div>
 
 ## 🌟 About The Project
