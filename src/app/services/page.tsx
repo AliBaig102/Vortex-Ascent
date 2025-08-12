@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Dumbbell, Users, Heart, Target, Clock, Trophy, Star, CheckCircle } from "lucide-react";
+import { Dumbbell, Users, Heart, Target, Clock, Trophy, Star, CheckCircle, Play, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+import { Header } from "@/components/custom/header";
+import { Footer } from "@/components/custom/footer";
 
 const services = [
   {
@@ -66,7 +69,9 @@ const additionalServices = [
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Header />
+      <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative py-20 px-4 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
         <div className="container mx-auto text-center">
@@ -78,7 +83,7 @@ export default function ServicesPage() {
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
             Discover our comprehensive range of fitness services designed to help you achieve your goals,
-            whether you're a beginner or an elite athlete.
+            whether you&apos;re a beginner or an elite athlete.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/signup">
@@ -94,84 +99,115 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
-      {/* Services Grid */}
+      {/* Content Left - Image Right Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Core Services</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Choose from our wide range of fitness services, each designed to meet your unique needs and preferences.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => {
-              const IconComponent = service.icon;
-              return (
-                <Card key={index} className={`relative h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${
-                  service.popular ? "ring-2 ring-primary" : ""
-                }`}>
-                  {service.popular && (
-                    <Badge className="absolute -top-2 left-1/2 transform -translate-x-1/2 bg-primary">
-                      Most Popular
-                    </Badge>
-                  )}
-                  <CardHeader className="text-center">
-                    <div className="mx-auto mb-4 p-3 bg-primary/10 rounded-full w-fit">
-                      <IconComponent className="h-8 w-8 text-primary" />
-                    </div>
-                    <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
-                    <CardDescription className="text-base">
-                      {service.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="flex-1 flex flex-col">
-                    <ul className="space-y-2 mb-6 flex-1">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm">
-                          <CheckCircle className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="border-t pt-4">
-                      <div className="text-2xl font-bold text-primary mb-4">{service.price}</div>
-                      <Link href="/contact">
-                        <Button className="w-full" variant={service.popular ? "default" : "outline"}>
-                          Get Started
-                        </Button>
-                      </Link>
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <Badge variant="outline" className="mb-4">
+                Professional Training
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Expert-Led Fitness Programs
+              </h2>
+              <p className="text-lg text-muted-foreground mb-6">
+                Our certified trainers bring years of experience and expertise to help you achieve your fitness goals.
+                From beginner-friendly routines to advanced athletic training, we provide personalized guidance every step of the way.
+              </p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                  Certified personal trainers with 10+ years experience
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                  Customized workout plans for all fitness levels
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                  Progress tracking and regular assessments
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                  Nutrition guidance and meal planning
+                </li>
+              </ul>
+              <Link href="/contact">
+                <Button size="lg" className="group">
+                  Start Training Today
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+            </div>
+            <div className="relative">
+              <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20">
+                <Image
+                  src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Professional trainer working with client"
+                  width={600}
+                  height={600}
+                  className="object-cover w-full h-full"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Additional Services */}
+      {/* Image Left - Content Right Section */}
       <section className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Additional Services</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Enhance your fitness journey with our complementary wellness and support services.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {additionalServices.map((service, index) => (
-              <Card key={index} className="p-4 text-center hover:shadow-md transition-shadow">
-                <Star className="h-6 w-6 text-primary mx-auto mb-2" />
-                <p className="text-sm font-medium">{service}</p>
-              </Card>
-            ))}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="relative order-2 lg:order-1">
+              <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-secondary/20 to-primary/20">
+                <Image
+                  src="https://images.pexels.com/photos/1552103/pexels-photo-1552103.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Modern gym equipment and facilities"
+                  width={600}
+                  height={600}
+                  className="object-cover w-full h-full"
+                />
+              </div>
+            </div>
+            <div className="order-1 lg:order-2">
+              <Badge variant="outline" className="mb-4">
+                State-of-the-Art Facility
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Premium Equipment & Amenities
+              </h2>
+              <p className="text-lg text-muted-foreground mb-6">
+                Train with confidence using our cutting-edge equipment and world-class facilities.
+                Our 15,000 square foot space is designed to provide the ultimate fitness experience with modern amenities and a comfortable environment.
+              </p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                  Latest cardio and strength training equipment
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                  Spacious group fitness studios
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                  Locker rooms with premium amenities
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                  24/7 access for members
+                </li>
+              </ul>
+              <Link href="/about">
+                <Button size="lg" variant="outline" className="group">
+                  Tour Our Facility
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -200,5 +236,7 @@ export default function ServicesPage() {
         </div>
       </section>
     </div>
+    <Footer />
+    </>
   );
 }
