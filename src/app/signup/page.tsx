@@ -218,7 +218,7 @@ export default function SignupPage() {
                   <Separator className="w-full" />
                 </div>
                 <div className="relative flex justify-center text-xs uppercase">
-                  <span className="bg-white px-2 text-zinc-500">
+                  <span className="bg-white px-2 text-zinc-500 dark:bg-zinc-800">
                     Or continue with
                   </span>
                 </div>
