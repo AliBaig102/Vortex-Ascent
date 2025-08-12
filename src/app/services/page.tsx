@@ -142,7 +142,7 @@ export default function ServicesPage() {
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20">
                 <Image
-                  src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="/images/image-03.jpeg"
                   alt="Professional trainer working with client"
                   width={600}
                   height={600}
@@ -161,7 +161,7 @@ export default function ServicesPage() {
             <div className="relative order-2 lg:order-1">
               <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-secondary/20 to-primary/20">
                 <Image
-                  src="https://images.pexels.com/photos/1552103/pexels-photo-1552103.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="/images/image-04.jpeg"
                   alt="Modern gym equipment and facilities"
                   width={600}
                   height={600}

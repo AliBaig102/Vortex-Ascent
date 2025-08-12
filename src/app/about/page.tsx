@@ -37,37 +37,6 @@ const values = [
   },
 ];
 
-const team = [
-  {
-    name: "Sarah Johnson",
-    role: "Head Trainer & Founder",
-    experience: "15+ years",
-    specialties: ["Strength Training", "Nutrition", "Competition Prep"],
-    image: "https://images.pexels.com/photos/3768916/pexels-photo-3768916.jpeg?auto=compress&cs=tinysrgb&w=400"
-  },
-  {
-    name: "Mike Rodriguez",
-    role: "Athletic Performance Coach",
-    experience: "12+ years",
-    specialties: ["Sports Performance", "Injury Prevention", "HIIT"],
-    image: "https://images.pexels.com/photos/1431282/pexels-photo-1431282.jpeg?auto=compress&cs=tinysrgb&w=400"
-  },
-  {
-    name: "Emily Chen",
-    role: "Wellness & Yoga Instructor",
-    experience: "8+ years",
-    specialties: ["Yoga", "Mindfulness", "Flexibility"],
-    image: "https://images.pexels.com/photos/3768997/pexels-photo-3768997.jpeg?auto=compress&cs=tinysrgb&w=400"
-  },
-  {
-    name: "David Thompson",
-    role: "Nutrition Specialist",
-    experience: "10+ years",
-    specialties: ["Meal Planning", "Weight Management", "Sports Nutrition"],
-    image: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=400"
-  },
-];
-
 export default function AboutPage() {
   return (
     <>
@@ -103,7 +72,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20">
                 <Image
-                  src="https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="/images/image-02.jpg"
                   alt="Modern gym interior"
                   width={600}
                   height={600}
@@ -228,7 +197,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="aspect-video rounded-2xl overflow-hidden">
                 <Image
-                  src="https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="/images/image-07.jpg"
                   alt="Gym equipment and facility"
                   width={600}
                   height={400}

@@ -203,7 +203,7 @@ export default function LoginPage() {
       <div className="w-[75%] relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-red-600/10 z-10"></div>
         <Image
-          src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          src="/images/image-01.jpeg"
           alt="Fitness motivation - Person working out"
           fill
           className="object-cover"

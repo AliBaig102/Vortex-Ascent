@@ -284,7 +284,7 @@ export function HeroSection() {
                 className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl"
               >
                 <Image
-                  src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="/images/image-05.jpeg"
                   alt="Fitness training - person working out in gym"
                   fill
                   className="object-cover"

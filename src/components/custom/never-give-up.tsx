@@ -185,7 +185,7 @@ export function NeverGiveUp() {
                 }}
               >
                 <Image
-                  src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb"
+                  src="/images/image-01.jpeg"
                   alt="Determined athlete training hard in gym"
                   fill
                   className="object-cover"

@@ -196,7 +196,7 @@ export function TrainingSteps() {
             <div className="relative">
               <div className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden">
                 <Image
-                  src="https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="/images/image-06.jpg"
                   alt="Gym equipment and training setup"
                   fill
                   className="object-cover"
@@ -298,7 +298,7 @@ export function TrainingSteps() {
             <div className="relative">
               <div className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden">
                 <Image
-                  src="https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="/images/image-07.jpg"
                   alt="Person doing cardio training in gym"
                   fill
                   className="object-cover"
@@ -316,7 +316,7 @@ export function TrainingSteps() {
             <div className="relative">
               <div className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden">
                 <Image
-                  src="https://images.pexels.com/photos/1552103/pexels-photo-1552103.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="/images/image-04.jpeg"
                   alt="Motivational gym training session"
                   fill
                   className="object-cover"

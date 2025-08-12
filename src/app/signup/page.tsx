@@ -269,7 +269,7 @@ export default function SignupPage() {
       <div className="hidden lg:block lg:w-[70%] relative">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-red-600/10 z-10" />
         <Image
-          src="https://images.pexels.com/photos/1431282/pexels-photo-1431282.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          src="/images/image-02.jpg"
           alt="Fitness community"
           fill
           className="object-cover"
