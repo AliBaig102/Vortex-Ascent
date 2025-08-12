@@ -4,6 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { Users, Target, Heart, Award, Clock, MapPin, Phone, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Header } from "@/components/custom/header";
+import { Footer } from "@/components/custom/footer";
 
 const stats = [
   { number: "5000+", label: "Active Members" },
@@ -68,7 +70,9 @@ const team = [
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Header />
+      <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative py-20 px-4 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
         <div className="container mx-auto">
@@ -305,5 +309,7 @@ export default function AboutPage() {
         </div>
       </section>
     </div>
+    <Footer />
+    </>
   );
 }

@@ -7,6 +7,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Phone, Mail, Clock, MessageSquare, Send } from "lucide-react";
 import { useState } from "react";
+import { Header } from "@/components/custom/header";
+import { Footer } from "@/components/custom/footer";
 
 const contactInfo = [
   {
@@ -78,7 +80,9 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Header />
+      <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative py-20 px-4 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
         <div className="container mx-auto text-center">
@@ -310,5 +314,7 @@ export default function ContactPage() {
         </div>
       </section>
     </div>
+    <Footer />
+    </>
   );
 }
