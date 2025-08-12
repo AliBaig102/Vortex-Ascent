@@ -178,11 +178,6 @@ export function TrainingSteps() {
                     </p>
                   </div>
                 </div>
-                
-                {/* Enhanced connection line for desktop */}
-                {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 -right-4 w-8 h-0.5 bg-gradient-to-r from-primary to-secondary opacity-60" />
-                )}
               </div>
             ))}
           </div>
