@@ -115,8 +115,21 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    cursor: none !important;
   }
   body {
     @apply bg-background text-foreground;
+  }
+  
+  /* Hide default cursor on interactive elements */
+  a, button, [role="button"], .cursor-hover {
+    cursor: none !important;
+  }
+  
+  /* Ensure cursor animation works on mobile */
+  @media (pointer: coarse) {
+    * {
+      cursor: auto !important;
+    }
   }
 }

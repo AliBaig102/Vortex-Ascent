@@ -196,47 +196,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* Team Section */}
-      <section className="py-20 px-4 bg-muted/30">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Our Expert Team</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Our certified trainers and wellness experts are here to guide you on your fitness journey.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="aspect-square relative">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    width={300}
-                    height={300}
-                    className="object-cover w-full h-full"
-                  />
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                  <p className="text-primary font-medium mb-2">{member.role}</p>
-                  <p className="text-sm text-muted-foreground mb-4">{member.experience}</p>
-                  <div className="flex flex-wrap gap-1">
-                    {member.specialties.map((specialty, specialtyIndex) => (
-                      <Badge key={specialtyIndex} variant="secondary" className="text-xs">
-                        {specialty}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Facility Info */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
